@@ -1,13 +1,14 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRouterModule } from './app-router.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // necesario cuando tenemos componentes que tienen algún tipo de animación
 
 import { AppComponent } from './app.component';
 
 // Módulo personalizado
+import { AppRouterModule } from './app-router.module';
 import { SharedModule } from './shared/shared.module';
-
 import { VentasModule } from './ventas/ventas.module';
+
 
 // Cambiar el locale de la app
 import localeEs from '@angular/common/locales/es-AR'
@@ -25,6 +26,7 @@ registerLocaleData( localeEs );
   imports: [
     AppRouterModule,
     BrowserModule,
+    BrowserAnimationsModule,
     SharedModule,
     VentasModule
   ],
